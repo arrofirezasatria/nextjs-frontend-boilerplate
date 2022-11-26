@@ -4,6 +4,8 @@ import {
   createTheme,
 } from "@mui/material/styles";
 
+import brandingTheme from "@modules/brandingTheme";
+
 interface Props {
   children?: React.ReactNode;
 }

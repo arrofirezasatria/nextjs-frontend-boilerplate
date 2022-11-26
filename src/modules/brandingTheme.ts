@@ -1,1 +1,3 @@
-export default function brandingTheme() {}
+export default function brandingTheme() {
+  return "";
+}
