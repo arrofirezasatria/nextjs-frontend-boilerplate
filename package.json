@@ -5,9 +5,10 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "build-prod":"clean build export",
+    "export": "next export",
+    "build-prod": "npm run clean && npm run build && npm run export",
+    "clean": "rimraf .next out",
     "start": "next start",
-    "clean":"rimraf .next out",
     "lint": "next lint",
     "prepare": "husky install"
   },

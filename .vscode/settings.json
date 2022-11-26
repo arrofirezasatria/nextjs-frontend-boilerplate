@@ -4,7 +4,7 @@
   "search.exclude": {
     "package-lock.json": true
   },
-  "editor.formatOnSave": false,
+  "editor.formatOnSave": true,
   "editor.codeActionsOnSave": [
     "source.addMissingImports",
     "source.fixAll.eslint"
