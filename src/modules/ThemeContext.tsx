@@ -6,29 +6,41 @@ import {
 
 import { getDesignTokens } from "@modules/brandingTheme";
 
-const BrandingThemeContext = React.createContext(() => {});
+export const ThemeContext = React.createContext({
+  darkMode: "dark",
+  handleToggleDarkMode: () =>
+    console.log("You forgot to wrap with ThemeContext"),
+});
+
+export const useThemeContext = () => {
+  return React.useContext(ThemeContext);
+};
 
 interface Props {
   children?: React.ReactNode;
 }
 
-export default function ThemeContext({ children }: Props) {
-  const paletteMode = "dark";
-  const brandingDesignTokens = getDesignTokens(paletteMode);
+export default function ThemeProvider({ children }: Props) {
+  const [darkMode, setDarkMode] = React.useState<"dark" | "light">("dark");
+
+  const brandingDesignTokens = getDesignTokens(darkMode);
+
+  const handleToggleDarkMode = () => {
+    setDarkMode((prev) => (prev === "dark" ? "light" : "dark"));
+  };
 
   const theme = React.useMemo(() => {
+    console.log("render theme");
     let nextTheme = createTheme({
       ...brandingDesignTokens,
     });
     return nextTheme;
-  }, [paletteMode]);
+  }, [brandingDesignTokens]);
 
   return (
-    <MuiThemeProvider theme={theme}>
-      <BrandingThemeContext.Provider value={() => {}}>
-        {children}
-      </BrandingThemeContext.Provider>
-    </MuiThemeProvider>
+    <ThemeContext.Provider value={{ darkMode, handleToggleDarkMode }}>
+      <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>
+    </ThemeContext.Provider>
   );
 }
 
