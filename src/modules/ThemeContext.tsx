@@ -4,21 +4,32 @@ import {
   createTheme,
 } from "@mui/material/styles";
 
-import brandingTheme from "@modules/brandingTheme";
+import { getDesignTokens } from "@modules/brandingTheme";
+
+const BrandingThemeContext = React.createContext(() => {});
 
 interface Props {
   children?: React.ReactNode;
 }
 
 export default function ThemeContext({ children }: Props) {
-  const paletteMode = true;
+  const paletteMode = "dark";
+  const brandingDesignTokens = getDesignTokens(paletteMode);
 
   const theme = React.useMemo(() => {
     let nextTheme = createTheme({
-      palette: {},
+      ...brandingDesignTokens,
     });
     return nextTheme;
   }, [paletteMode]);
 
-  return <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>;
+  return (
+    <MuiThemeProvider theme={theme}>
+      <BrandingThemeContext.Provider value={() => {}}>
+        {children}
+      </BrandingThemeContext.Provider>
+    </MuiThemeProvider>
+  );
 }
+
+export const toggleDarkMode = () => {};
