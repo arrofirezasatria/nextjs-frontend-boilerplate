@@ -1,6 +1,3 @@
-import { createTheme, ThemeOptions } from "@mui/material/styles";
-import { dark } from "@mui/material/styles/createPalette";
-
 export const blue = {
   50: "#F0F7FF",
   100: "#C2E0FF",

@@ -8,8 +8,7 @@ import { getDesignTokens } from "@modules/brandingTheme";
 
 export const ThemeContext = React.createContext({
   darkMode: "dark",
-  handleToggleDarkMode: () =>
-    console.log("You forgot to wrap with ThemeContext"),
+  toggleDarkMode: () => console.log("You forgot to wrap with ThemeContext"),
 });
 
 export const useThemeContext = () => {
@@ -25,12 +24,11 @@ export default function ThemeProvider({ children }: Props) {
 
   const brandingDesignTokens = getDesignTokens(darkMode);
 
-  const handleToggleDarkMode = () => {
+  const toggleDarkMode = (): void => {
     setDarkMode((prev) => (prev === "dark" ? "light" : "dark"));
   };
 
   const theme = React.useMemo(() => {
-    console.log("render theme");
     let nextTheme = createTheme({
       ...brandingDesignTokens,
     });
@@ -38,7 +36,7 @@ export default function ThemeProvider({ children }: Props) {
   }, [brandingDesignTokens]);
 
   return (
-    <ThemeContext.Provider value={{ darkMode, handleToggleDarkMode }}>
+    <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
       <MuiThemeProvider theme={theme}>{children}</MuiThemeProvider>
     </ThemeContext.Provider>
   );
