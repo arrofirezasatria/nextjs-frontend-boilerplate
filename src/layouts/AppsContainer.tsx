@@ -4,6 +4,7 @@ import React from "react";
 import Footer from "@layouts/Footer";
 import { NextSeoProps } from "next-seo/lib/types";
 import Header from "@layouts/Header";
+import AppsBar from "@components/AppsBar";
 
 interface props {
   children: React.ReactNode;
@@ -15,7 +16,7 @@ export default function AppsContainer(perops: props) {
   return (
     <Container {...rest}>
       <NextSeo {...basicSeo} />
-      <Header />
+      <AppsBar />
       {children}
       <Footer />
     </Container>
