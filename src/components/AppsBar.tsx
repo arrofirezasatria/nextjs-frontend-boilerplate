@@ -2,6 +2,8 @@ import { AppBar, Button, Container, Toolbar, Typography } from "@mui/material";
 import React from "react";
 import { useThemeContext } from "@modules/ThemeContext";
 
+const link = [{ title: "", link: "/ad" }, { title: "/asd" }];
+
 export default function AppsBar() {
   const { toggleDarkMode } = useThemeContext();
 

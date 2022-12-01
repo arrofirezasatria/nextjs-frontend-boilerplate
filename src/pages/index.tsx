@@ -13,9 +13,11 @@ export default function Home() {
 
   return (
     <AppsContainer>
-      <header>title</header>
-      <section>a</section>
-      <section>b</section>
+      <Box component="main">
+        <header>title</header>
+        <section>a</section>
+        <section>b</section>
+      </Box>
     </AppsContainer>
   );
 }

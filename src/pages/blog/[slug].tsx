@@ -7,21 +7,23 @@ import React from "react";
 export default function BlogPost() {
   return (
     <AppsContainer>
-      {/* JSON-LD can more than one  */}
-      <ArticleJsonLd
-        url={""}
-        title={""}
-        images={[]}
-        datePublished={""}
-        authorName={undefined}
-        description={""}
-      />
-      <Box component={"article"}>
+      <Box component={"main"}>
+        {/* JSON-LD can more than one  */}
+        <ArticleJsonLd
+          url={""}
+          title={""}
+          images={[]}
+          datePublished={""}
+          authorName={undefined}
+          description={""}
+        />
         <header>
           <h1>Your Title</h1>
           <h2>subtitle</h2>
         </header>
-        <div>article body</div>
+        <Box component={"article"}>
+          <div>article body</div>
+        </Box>
       </Box>
     </AppsContainer>
   );

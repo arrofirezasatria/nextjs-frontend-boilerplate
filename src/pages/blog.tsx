@@ -4,8 +4,14 @@ import React from "react";
 export default function blog() {
   return (
     <AppsContainer>
-      <header>ad</header>
-      <div>ad</div>
+      <main>
+        <header>
+          <h1>Blog index TItle</h1>
+        </header>
+        <div>search</div>
+        <div>category</div>
+        <div>blog list</div>
+      </main>
     </AppsContainer>
   );
 }
