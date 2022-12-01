@@ -11,8 +11,8 @@ interface props {
   basicSeo?: NextSeoProps;
 }
 
-export default function AppsContainer(perops: props) {
-  const { children, basicSeo, ...rest } = perops;
+export default function AppsContainer(AppsContainerProps: props) {
+  const { children, basicSeo, ...rest } = AppsContainerProps;
   return (
     <Container {...rest}>
       <NextSeo {...basicSeo} />

@@ -41,5 +41,3 @@ export default function ThemeProvider({ children }: Props) {
     </ThemeContext.Provider>
   );
 }
-
-export const toggleDarkMode = () => {};

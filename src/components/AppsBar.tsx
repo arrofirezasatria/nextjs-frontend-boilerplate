@@ -1,12 +1,19 @@
-import { AppBar, Toolbar } from "@mui/material";
-import { Container } from "@mui/system";
+import { AppBar, Button, Container, Toolbar, Typography } from "@mui/material";
 import React from "react";
+import { useThemeContext } from "@modules/ThemeContext";
 
 export default function AppsBar() {
+  const { toggleDarkMode } = useThemeContext();
+
   return (
     <AppBar>
       <Container>
-        <Toolbar>asdn</Toolbar>
+        <Toolbar>
+          <Typography>ad</Typography>
+          <Button onClick={toggleDarkMode}>
+            <Typography color={"secondary"}>Dark Mode</Typography>
+          </Button>
+        </Toolbar>
       </Container>
     </AppBar>
   );

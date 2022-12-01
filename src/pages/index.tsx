@@ -5,11 +5,17 @@ import styles from "../../styles/Home.module.css";
 
 import { Box, Typography } from "@mui/material";
 
-import { toggleDarkMode, useThemeContext } from "@modules/ThemeContext";
+import { useThemeContext } from "@modules/ThemeContext";
 import AppsContainer from "@layouts/AppsContainer";
 
 export default function Home() {
   const { darkMode, toggleDarkMode } = useThemeContext();
 
-  return <AppsContainer>as</AppsContainer>;
+  return (
+    <AppsContainer>
+      <header>title</header>
+      <section>a</section>
+      <section>b</section>
+    </AppsContainer>
+  );
 }
