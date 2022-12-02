@@ -7,7 +7,7 @@ import {
 import { getDesignTokens } from "@modules/brandingTheme";
 
 export const ThemeContext = React.createContext({
-  darkMode: "dark",
+  darkMode: {},
   toggleDarkMode: () => console.log("You forgot to wrap with ThemeContext"),
 });
 
@@ -20,13 +20,23 @@ interface Props {
 }
 
 export default function ThemeProvider({ children }: Props) {
-  const [darkMode, setDarkMode] = React.useState<"dark" | "light">("dark");
-
-  const brandingDesignTokens = getDesignTokens(darkMode);
+  const [darkMode, setDarkMode] = React.useState<string | null>(null);
 
   const toggleDarkMode = (): void => {
     setDarkMode((prev) => (prev === "dark" ? "light" : "dark"));
   };
+
+  React.useEffect(() => {
+    let initialMode = "light";
+    try {
+      initialMode = localStorage.getItem("dark-mode") || initialMode;
+    } catch (error) {
+      // do nothing
+    }
+    setDarkMode(initialMode);
+  }, []);
+
+  const brandingDesignTokens = getDesignTokens(darkMode);
 
   const theme = React.useMemo(() => {
     let nextTheme = createTheme({

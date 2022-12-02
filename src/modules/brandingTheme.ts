@@ -39,7 +39,7 @@ const systemFont = [
   '"Segoe UI Symbol"',
 ];
 
-export const getDesignTokens = (mode: "light" | "dark") => {
+export const getDesignTokens = (mode: string | null) => {
   return {
     palette: {
       primary: {

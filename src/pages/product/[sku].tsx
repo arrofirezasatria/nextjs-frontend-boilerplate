@@ -1,5 +1,4 @@
 import AppsContainer from "@layouts/AppsContainer";
-import Header from "@layouts/Header";
 import { Box } from "@mui/material";
 import { ProductJsonLd } from "next-seo";
 import React from "react";
