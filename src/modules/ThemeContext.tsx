@@ -6,6 +6,9 @@ import {
 
 import { getDesignTokens } from "@modules/brandingTheme";
 import { useMediaQuery } from "@mui/material";
+// import useLocalStorage from "./hooks/useLocalStorage";
+
+import useLocalStorage from "beautiful-react-hooks/useLocalStorage";
 
 export const ThemeContext = React.createContext({
   darkMode: {},
@@ -22,37 +25,37 @@ interface Props {
 
 export default function ThemeProvider({ children }: Props) {
   const prefersDarkMode = useMediaQuery("(prefers-color-scheme: dark)");
-  const preferredMode = prefersDarkMode ? "dark" : "light";
-  const [darkMode, setDarkMode] = React.useState<"light" | "dark">(
-    localStorage.getItem("mui-dark-mode") === null ? preferredMode : "dark"
+  const [darkMode, setDarkMode] = React.useState(
+    prefersDarkMode === true ? "dark" : "light"
   );
 
   React.useEffect(() => {
-    let tempMode: string | null = "light";
+    // console.log("useeffect");
     if (typeof window !== "undefined") {
-      tempMode = localStorage.getItem("mui-dark-mode");
-    }
-
-    if (tempMode === ("light" || "dark")) {
-      console.log(tempMode + "inside useEffect");
-      setDarkMode(tempMode);
-      localStorage.setItem("mui-dark-mode", darkMode);
+      let initialMode = localStorage.getItem("mui-dark-mode");
+      if (initialMode !== null) {
+        console.log(darkMode);
+        setDarkMode(darkMode);
+        localStorage.setItem("mui-dark-mode", darkMode);
+        // console.log(initialMode);
+        // console.log(darkMode);
+      }
     }
   }, []);
 
-  const toggleDarkMode = (): void => {
-    setDarkMode((prev) => (prev === "dark" ? "light" : "dark"));
+  const toggleDarkMode = () => {
+    setDarkMode((prev: string) => (prev === "dark" ? "light" : "dark"));
     localStorage.setItem("mui-dark-mode", darkMode);
   };
 
-  const brandingDesignTokens = getDesignTokens(darkMode);
-
   const theme = React.useMemo(() => {
+    console.log(darkMode);
+    const brandingDesignTokens = getDesignTokens(darkMode);
     let nextTheme = createTheme({
       ...brandingDesignTokens,
     });
     return nextTheme;
-  }, [brandingDesignTokens]);
+  }, [darkMode]);
 
   return (
     <ThemeContext.Provider value={{ darkMode, toggleDarkMode }}>
