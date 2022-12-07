@@ -7,12 +7,6 @@ const link = [{ title: "", link: "/ad" }, { title: "/asd" }];
 export default function AppsBar() {
   const { toggleDarkMode } = useThemeContext();
 
-  React.useEffect(() => {}, []);
-
-  const handleChangeDarkMode = () => {
-    localStorage.setItem("dark-mode");
-  };
-
   return (
     <AppBar>
       <Container>
