@@ -1,20 +1,29 @@
-import { AppBar, Button, Container, Toolbar, Typography } from "@mui/material";
+import {
+  AppBar,
+  Button,
+  Container,
+  IconButton,
+  Toolbar,
+  Typography,
+} from "@mui/material";
 import React from "react";
-import { useThemeContext } from "@modules/ThemeContext";
+import { useThemeContext } from "@modules/components/ThemeContext";
+import Brightness4Icon from "@mui/icons-material/Brightness4";
+import Brightness7Icon from "@mui/icons-material/Brightness7";
 
 const link = [{ title: "", link: "/ad" }, { title: "/asd" }];
 
 export default function AppsBar() {
-  const { toggleDarkMode } = useThemeContext();
+  const { toggleDarkMode, darkMode } = useThemeContext();
 
   return (
     <AppBar>
       <Container>
         <Toolbar>
           <Typography>ad</Typography>
-          <Button onClick={toggleDarkMode}>
-            <Typography color={"secondary"}>Dark Mode</Typography>
-          </Button>
+          <IconButton onClick={toggleDarkMode}>
+            {darkMode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
+          </IconButton>
         </Toolbar>
       </Container>
     </AppBar>
