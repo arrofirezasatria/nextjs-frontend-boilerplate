@@ -21,6 +21,6 @@
       "@modules/*": ["src/modules/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "cypress/tsconfig.json"],
   "exclude": ["node_modules"]
 }
