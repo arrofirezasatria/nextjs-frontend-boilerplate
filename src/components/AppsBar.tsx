@@ -1,12 +1,4 @@
-import {
-  AppBar,
-  Box,
-  Button,
-  Container,
-  IconButton,
-  Toolbar,
-  Typography,
-} from "@mui/material";
+import { AppBar, Box, Container, IconButton, Toolbar } from "@mui/material";
 import React from "react";
 import { useThemeContext } from "@modules/components/ThemeContext";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
@@ -17,10 +9,6 @@ const link = [
   { title: "about", link: "/about" },
   { title: "blog", link: "/blog" },
 ];
-
-const CustomLink = (params: { url: string; title: string }) => {
-  return <Link href={params.url}>{params.title}</Link>;
-};
 
 export default function AppsBar() {
   const { toggleDarkMode, darkMode } = useThemeContext();
@@ -34,7 +22,7 @@ export default function AppsBar() {
               {link.map((item, index) => {
                 return (
                   <li key={index}>
-                    <CustomLink url={item.link} title={item.title} />
+                    <Link href={item.link}>{item.title}</Link>
                   </li>
                 );
               })}

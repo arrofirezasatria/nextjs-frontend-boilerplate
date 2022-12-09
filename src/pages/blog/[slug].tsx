@@ -21,9 +21,9 @@ export default function BlogPost() {
           <h1>Your Title</h1>
           <h2>subtitle</h2>
         </header>
-        <Box component={"article"}>
+        <article>
           <div>article body</div>
-        </Box>
+        </article>
       </Box>
     </AppsContainer>
   );

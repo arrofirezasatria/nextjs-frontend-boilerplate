@@ -10,7 +10,9 @@ export default function Home() {
   return (
     <AppsContainer>
       <Box component="main">
-        <header>title</header>
+        <header>
+          <h1>title</h1>
+        </header>
         <section>a</section>
         <section>b</section>
       </Box>
