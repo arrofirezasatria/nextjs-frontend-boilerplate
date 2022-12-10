@@ -17,6 +17,11 @@ export default function Document() {
           content={"black"}
           media="(prefers-color-scheme: dark)"
         />
+        <link
+          rel="apple-touch-icon"
+          sizes="180x180"
+          href="/static/icons/180x180.png"
+        />
       </Head>
       <body>
         <Main />
