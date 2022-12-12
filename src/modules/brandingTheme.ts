@@ -1,3 +1,6 @@
+import { Rubik } from "@next/font/google";
+import { Poppins } from "@next/font/google";
+
 export const blue = {
   50: "#F0F7FF",
   100: "#C2E0FF",
@@ -26,7 +29,14 @@ export const blueDark = {
   900: "#0A1929",
 };
 
+const rubik = Poppins({
+  variable: "--rubik-font",
+  subsets: ["latin"],
+  weight: ["400"],
+});
+
 const systemFont = [
+  "--rubik-font",
   "-apple-system",
   "BlinkMacSystemFont",
   '"Segoe UI"',
@@ -56,7 +66,7 @@ export const getDesignTokens = (mode: string | null) => {
       },
     },
     typography: {
-      fontFamily: ["rubik", ...systemFont].join(","),
+      fontFamily: [...systemFont].join(","),
     },
     components: {},
   };

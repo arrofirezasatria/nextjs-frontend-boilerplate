@@ -1,5 +1,5 @@
-import { AppBar, Box, Container, IconButton, Toolbar } from "@mui/material";
 import React from "react";
+import { AppBar, Box, Container, IconButton, Toolbar } from "@mui/material";
 import { useThemeContext } from "@modules/components/ThemeContext";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
