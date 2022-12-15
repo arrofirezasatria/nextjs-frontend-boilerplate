@@ -21,6 +21,13 @@
       "@modules/*": ["src/modules/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", "cypress/tsconfig.json"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "cypress/tsconfig.json",
+    "next-i18next.config.js",
+    "next-i18next.config.js"
+  ],
   "exclude": ["node_modules"]
 }
