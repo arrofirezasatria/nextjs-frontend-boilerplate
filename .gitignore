@@ -38,3 +38,7 @@ next-env.d.ts
 # pwa
 /public/sw.js
 /public/workbox*
+
+# sitemap
+/public/robots.txt
+/public/sitemap*

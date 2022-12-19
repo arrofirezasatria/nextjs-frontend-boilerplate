@@ -8,6 +8,7 @@
     "export": "next export",
     "build-prod": "npm run clean && npm run build",
     "build-stats": "cross-env ANALYZE=true npm run build",
+    "postbuild": "next-sitemap",
     "clean": "rimraf .next out",
     "start": "next start",
     "lint": "next lint",
