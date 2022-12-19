@@ -3,7 +3,6 @@ import { Box } from "@mui/material";
 
 import { useThemeContext } from "@modules/components/ThemeContext";
 import AppsContainer from "@layouts/AppsContainer";
-import { GetStaticProps, GetStaticPropsContext } from "next";
 import useTranslation from "next-translate/useTranslation";
 
 export default function Home() {
@@ -23,12 +22,3 @@ export default function Home() {
     </AppsContainer>
   );
 }
-
-// export async function getStaticProps({ locale }: GetStaticPropsContext) {
-//   console.log(locale);
-//   return {
-//     props: {
-//       message: (await import(`../../public/locales/${locale}.json`)).default,
-//     },
-//   };
-// }
