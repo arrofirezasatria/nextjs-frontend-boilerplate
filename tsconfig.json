@@ -18,9 +18,7 @@
     "paths": {
       "@components/*": ["src/components/*"],
       "@layouts/*": ["src/layouts/*"],
-      "@modules/*": ["src/modules/*"],
-      "@types/*": ["lib/types/*"],
-      "@utils/*": ["lib/utils/*"]
+      "@modules/*": ["src/modules/*"]
     }
   },
   "include": [
@@ -29,7 +27,8 @@
     "**/*.tsx",
     "cypress/tsconfig.json",
     "next-i18next.config.js",
-    "next-i18next.config.js"
+    "next-i18next.config.js",
+    "next-sitemap.config.js"
   ],
   "exclude": ["node_modules"]
 }

@@ -12,7 +12,7 @@ export default function Home() {
 
   return (
     <AppsContainer>
-      <Box component="main">
+      <Box component="main" sx={{ height: "100vh" }}>
         <header>
           <h1>Title</h1>
         </header>

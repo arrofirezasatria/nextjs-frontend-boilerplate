@@ -6,8 +6,8 @@ import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Link from "next/link";
 
 const link = [
-  { title: "about", link: "/about" },
-  { title: "blog", link: "/blog" },
+  { title: "Home", link: "/about" },
+  { title: "log", link: "/blog" },
 ];
 
 export default function AppsBar() {
@@ -15,9 +15,19 @@ export default function AppsBar() {
 
   return (
     <AppBar>
-      <Container>
-        <Toolbar>
-          <Box component="nav" sx={{ display: "flex", flexGrow: 1, gap: 4 }}>
+      <Container maxWidth={"sm"} disableGutters>
+        <Toolbar disableGutters={true}>
+          <Box
+            component="nav"
+            sx={{
+              display: "flex",
+              flexGrow: 1,
+              gap: 4,
+              "& ul": {
+                listStyleType: "none",
+              },
+            }}
+          >
             <ul>
               {link.map((item, index) => {
                 return (

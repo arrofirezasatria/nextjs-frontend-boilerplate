@@ -1,4 +1,5 @@
 import { Rubik } from "@next/font/google";
+import { Poppins } from "@next/font/google";
 
 export const blue = {
   50: "#F0F7FF",
@@ -31,7 +32,7 @@ export const blueDark = {
 const rubik = Rubik({
   variable: "--rubik-font",
   subsets: ["latin"],
-  weight: ["400"],
+  weight: ["600"],
 });
 
 const systemFont = [
