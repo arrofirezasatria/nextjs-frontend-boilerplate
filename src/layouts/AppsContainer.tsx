@@ -6,8 +6,6 @@ import { NextSeoProps } from "next-seo/lib/types";
 import Header from "@layouts/Header";
 import AppsBar from "@components/AppsBar";
 
-import useTheme from "@mui/material/styles/useTheme";
-
 interface props {
   children: React.ReactNode;
   basicSeo?: NextSeoProps;
@@ -15,11 +13,10 @@ interface props {
 
 export default function AppsContainer(AppsContainerProps: props) {
   const { children, basicSeo, ...rest } = AppsContainerProps;
-  const theme = useTheme();
 
   return (
     <Container
-      disableGutters={theme.breakpoints.up("lg") === true}
+      // disableGutters={theme.breakpoints.up("lg") === true}
       maxWidth={"sm"}
       {...rest}
     >

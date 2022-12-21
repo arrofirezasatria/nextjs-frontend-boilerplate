@@ -4,6 +4,9 @@ import { useThemeContext } from "@modules/components/ThemeContext";
 import Brightness4Icon from "@mui/icons-material/Brightness4";
 import Brightness7Icon from "@mui/icons-material/Brightness7";
 import Link from "next/link";
+import { alpha, useTheme } from "@mui/material/styles";
+
+import { yaleBlue } from "@modules/brandingTheme";
 
 const link = [
   { title: "Home", link: "/about" },
@@ -13,8 +16,21 @@ const link = [
 export default function AppsBar() {
   const { toggleDarkMode, darkMode } = useThemeContext();
 
+  const theme = useTheme();
+
   return (
-    <AppBar>
+    <AppBar
+      position="sticky"
+      sx={{
+        backdropFilter: "blur(20px)",
+        boxShadow: `inset 0px -1px 1px ${
+          theme.palette.mode === "dark"
+            ? yaleBlue[400]
+            : theme.palette.grey[100]
+        }`,
+        backgroundColor: alpha(yaleBlue[400], 0.5),
+      }}
+    >
       <Container maxWidth={"sm"} disableGutters>
         <Toolbar disableGutters={true}>
           <Box
