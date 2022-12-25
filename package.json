@@ -1,7 +1,5 @@
 {
   "name": "nextjs-mui-boilerplate",
-  "version": "0.1.0",
-  "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "next build",
@@ -19,12 +17,12 @@
   "dependencies": {
     "@emotion/react": "^11.10.5",
     "@emotion/styled": "^11.10.5",
-    "@mui/material": "^5.11.0",
-    "@next/font": "^13.0.7",
-    "next": "13.0.7",
+    "@mui/material": "^5.11.1",
+    "@next/font": "^13.1.1",
+    "next": "13.1.1",
     "next-pwa": "^5.6.0",
     "next-seo": "^5.15.0",
-    "next-sitemap": "^3.1.42",
+    "next-sitemap": "^3.1.43",
     "next-translate": "^1.6.0",
     "react": "18.2.0",
     "react-dom": "18.2.0"
@@ -34,15 +32,16 @@
     "@commitlint/config-conventional": "^17.3.0",
     "@commitlint/cz-commitlint": "^17.3.0",
     "@mui/icons-material": "^5.11.0",
-    "@next/bundle-analyzer": "^13.0.7",
+    "@next/bundle-analyzer": "^13.1.1",
+    "@semantic-release/changelog": "^6.0.2",
+    "@semantic-release/git": "^10.0.1",
     "@types/node": "18.11.17",
     "@types/react": "18.0.26",
-    "@types/react-dom": "18.0.9",
-    "commitizen": "^4.2.6",
+    "@types/react-dom": "18.0.10",
     "cross-env": "^7.0.3",
-    "cypress": "^12.1.0",
+    "cypress": "^12.2.0",
     "eslint": "8.30.0",
-    "eslint-config-next": "13.0.7",
+    "eslint-config-next": "13.1.1",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-prettier": "^4.2.1",
     "husky": "^8.0.2",
@@ -53,9 +52,22 @@
     "semantic-release": "^19.0.5",
     "typescript": "4.9.4"
   },
-  "config": {
-    "commitizen": {
-      "path": "@commitlint/cz-commitlint"
-    }
+  "release": {
+    "branches": [
+      "main"
+    ],
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/changelog",
+      [
+        "@semantic-release/npm",
+        {
+          "npmPublish": false
+        }
+      ],
+      "@semantic-release/git",
+      "@semantic-release/github"
+    ]
   }
 }
