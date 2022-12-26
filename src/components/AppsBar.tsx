@@ -22,25 +22,49 @@ export default function AppsBar() {
     <AppBar
       position="sticky"
       sx={{
-        backdropFilter: "blur(20px)",
-        boxShadow: `inset 0px -1px 1px ${
-          theme.palette.mode === "dark"
-            ? yaleBlue[400]
-            : theme.palette.grey[100]
-        }`,
-        backgroundColor: alpha(yaleBlue[400], 0.5),
+        backgroundColor: "transparent",
+        boxShadow: "none",
       }}
     >
-      <Container maxWidth={"sm"} disableGutters>
-        <Toolbar disableGutters={true}>
+      <Container
+        maxWidth={"sm"}
+        disableGutters
+        sx={{
+          backdropFilter: "blur(20px)",
+          boxShadow: `inset 0px -1px 1px ${
+            theme.palette.mode === "dark"
+              ? yaleBlue[400]
+              : theme.palette.grey[100]
+          }`,
+          borderRadius: "8px",
+          my: 2,
+          overflow: "hidden",
+        }}
+      >
+        <Toolbar
+          disableGutters={true}
+          sx={{ display: "flex", flexDirection: "column" }}
+        >
+          <Box sx={{}}>
+            <IconButton onClick={toggleDarkMode}>
+              {darkMode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
+            </IconButton>
+          </Box>
           <Box
             component="nav"
             sx={{
               display: "flex",
+              backgroundColor: "white",
+              width: "100%",
+              overflow: "hidden",
               flexGrow: 1,
               gap: 4,
               "& ul": {
                 listStyleType: "none",
+                padding: 0,
+                "& li": {
+                  float: "left",
+                },
               },
             }}
           >
@@ -54,9 +78,6 @@ export default function AppsBar() {
               })}
             </ul>
           </Box>
-          <IconButton onClick={toggleDarkMode}>
-            {darkMode === "dark" ? <Brightness7Icon /> : <Brightness4Icon />}
-          </IconButton>
         </Toolbar>
       </Container>
     </AppBar>
