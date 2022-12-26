@@ -10,7 +10,7 @@ import { yaleBlue } from "@modules/brandingTheme";
 
 const link = [
   { title: "Home", link: "/about" },
-  { title: "log", link: "/blog" },
+  { title: "About", link: "/blog" },
 ];
 
 export default function AppsBar() {
@@ -54,7 +54,7 @@ export default function AppsBar() {
             component="nav"
             sx={{
               display: "flex",
-              backgroundColor: "white",
+              backgroundColor: "#F5F5F5",
               width: "100%",
               overflow: "hidden",
               flexGrow: 1,
@@ -62,8 +62,23 @@ export default function AppsBar() {
               "& ul": {
                 listStyleType: "none",
                 padding: 0,
+                margin: 0,
                 "& li": {
+                  display: "flex",
                   float: "left",
+                  my: 1,
+                  ml: 1,
+                  mr: 0,
+                  p: 1,
+                  px: 1.5,
+                  // backgroundColor: "lightGray",
+                  borderRadius: "8px",
+                  "& a": {
+                    color: "gray",
+                    fontSize: "14px",
+                    fontFamily: "Rubik",
+                    textDecoration: "none",
+                  },
                 },
               },
             }}
