@@ -52,6 +52,7 @@
     "prettier": "^2.8.1",
     "rimraf": "^3.0.2",
     "semantic-release": "^19.0.5",
+    "semantic-release-github-pullrequest": "^1.3.0",
     "typescript": "4.9.4"
   },
   "release": {
@@ -68,6 +69,15 @@
       }
     ],
       "@semantic-release/changelog",
+      [
+        "semantic-release-github-pullrequest",
+        {
+          "assets": [
+            "CHANGELOG.md"
+          ],
+          "baseRef": "main"
+        }
+      ],
       [
         "@semantic-release/npm",
         {
