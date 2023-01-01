@@ -16,7 +16,7 @@ import { alpha, useTheme } from "@mui/material/styles";
 import { yaleBlue } from "@modules/brandingTheme";
 
 const link = [
-  { title: "Home", link: "/about" },
+  { title: "Home", link: "/" },
   { title: "About", link: "/about" },
   { title: "Blog", link: "/blog" },
 ];
