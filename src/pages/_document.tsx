@@ -1,3 +1,4 @@
+import { Box } from "@mui/material";
 import { Html, Head, Main, NextScript } from "next/document";
 
 export default function Document() {
@@ -23,10 +24,10 @@ export default function Document() {
           href="/static/icons/180x180.png"
         />
       </Head>
-      <body>
+      <Box component="body" sx={{ display: "block", margin: 0, padding: 0 }}>
         <Main />
         <NextScript />
-      </body>
+      </Box>
     </Html>
   );
 }
