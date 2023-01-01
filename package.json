@@ -1,6 +1,6 @@
 {
   "name": "nextjs-mui-boilerplate",
-  "version": "1.0.0",
+  "version": "1.1.0",
   "author": "Arrofi Reza S. (https://github.com/arrofirezasatria)",
   "scripts": {
     "dev": "next dev",
@@ -63,11 +63,14 @@
       "@semantic-release/commit-analyzer",
       "@semantic-release/release-notes-generator",
       [
-      "semantic-release-github-pullrequest", {
-        "assets": ["CHANGELOG.md"],
-        "baseRef": "main"
-      }
-    ],
+        "semantic-release-github-pullrequest",
+        {
+          "assets": [
+            "CHANGELOG.md"
+          ],
+          "baseRef": "main"
+        }
+      ],
       "@semantic-release/changelog",
       [
         "semantic-release-github-pullrequest",

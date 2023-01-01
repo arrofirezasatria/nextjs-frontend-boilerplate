@@ -1,3 +1,18 @@
+# [1.1.0](https://github.com/arrofirezasatria/nextjs-mui-boilerplate/compare/v1.0.0...v1.1.0) (2023-01-01)
+
+
+### Bug Fixes
+
+* color appsbar ([1beb857](https://github.com/arrofirezasatria/nextjs-mui-boilerplate/commit/1beb857cdf2492815945f6c7bdcaab8c5f2c6160))
+* style appsbar and footer ([c3c4e07](https://github.com/arrofirezasatria/nextjs-mui-boilerplate/commit/c3c4e07db0c15e52c761ec6cd6a808905930b82a))
+* styling ([c692ebd](https://github.com/arrofirezasatria/nextjs-mui-boilerplate/commit/c692ebd66fa956d280f081cf3852a493cce159bd))
+* styling in appsbar and footer ([aa7833b](https://github.com/arrofirezasatria/nextjs-mui-boilerplate/commit/aa7833b6bb7d4d111758aae7e4fe6fb3eeda7512))
+
+
+### Features
+
+* appsbar with 2 sided background ([99faf2e](https://github.com/arrofirezasatria/nextjs-mui-boilerplate/commit/99faf2e3d7efd2046136a8bbffd2eafa60abbfac))
+
 # 1.0.0 (2022-12-25)
 
 
