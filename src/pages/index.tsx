@@ -13,19 +13,39 @@ export default function Home() {
 
   return (
     <AppsContainer>
-      <Box component="main" sx={{ height: "100vh" }}>
+      <Box component="main" sx={{ height: "700px" }}>
         <header>{/* <h1>Title</h1> */}</header>
         {/* <section>{title}</section> */}
         <section>
-          <Box width={"100%"} height="300px" sx={{ position: "relative" }}>
+          {/* <Box
+            width={"100%"}
+            height="300px"
+            sx={{
+              position: "relative",
+              borderRadius: "8px",
+              overflow: "hidden",
+            }}
+          >
             <Image
               src="/static/images/dummyImage_1600x900.png"
               fill
               alt={""}
               style={{ objectFit: "cover" }}
             />
-          </Box>
-          <Typography textAlign={"center"}>Tech</Typography>
+          </Box> */}
+          <Box></Box>
+          <Typography
+            textAlign={"center"}
+            sx={{ fontSize: "28px", fontWeight: "bold", fontFamily: "", my: 3 }}
+          >
+            NEXTJS - MUI - BOILERPLATE
+          </Typography>
+          <Typography
+            textAlign={"center"}
+            sx={{ fontSize: "28px", fontWeight: "bold", fontFamily: "", my: 3 }}
+          >
+            TECH
+          </Typography>
           <Stack
             direction={"row"}
             sx={{ width: "100%", mt: 2 }}
