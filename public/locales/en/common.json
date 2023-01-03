@@ -1,3 +1,8 @@
 {
+  "navbar": {
+    "button1": "home",
+    "button2": "about",
+    "button3": "blog"
+  },
   "title": "en tittle"
 }

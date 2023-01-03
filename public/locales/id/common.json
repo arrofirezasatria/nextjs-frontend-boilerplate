@@ -1,3 +1,8 @@
 {
+  "navbar": {
+    "button1": "rumah",
+    "button2": "tentang",
+    "button3": "blog"
+  },
   "title": "id tittle"
 }
