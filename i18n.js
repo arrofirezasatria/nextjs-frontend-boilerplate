@@ -8,6 +8,9 @@ module.exports = {
   locales: ["en", "id"],
   defaultLocale: "en",
   pages: {
+    "*": ["common"],
     "/": ["home"],
+    about: ["about"],
+    blog: ["blog"],
   },
 };

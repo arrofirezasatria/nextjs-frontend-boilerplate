@@ -5,6 +5,7 @@ import { useThemeContext } from "@modules/components/ThemeContext";
 import AppsContainer from "@layouts/AppsContainer";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
+import IconBoilerplate from "@components/icon/IconBoilerplate";
 
 export default function Home() {
   const { darkMode, toggleDarkMode } = useThemeContext();
@@ -15,7 +16,7 @@ export default function Home() {
     <AppsContainer>
       <Box component="main" sx={{ height: "700px" }}>
         <header>{/* <h1>Title</h1> */}</header>
-        {/* <section>{title}</section> */}
+        <section>{title}</section>
         <section>
           {/* <Box
             width={"100%"}
@@ -33,7 +34,31 @@ export default function Home() {
               style={{ objectFit: "cover" }}
             />
           </Box> */}
-          <Box></Box>
+
+          <Box
+            sx={{ display: "flex", justifyContent: "center", height: "240px" }}
+          >
+            <Box
+              sx={{
+                justifySelf: "center",
+                alignSelf: "center",
+                position: "relative",
+                borderRadius: "8px",
+                overflow: "hidden",
+                width: "80px",
+                height: "80px",
+              }}
+            >
+              <Image
+                src={"/static/icons/maskable_icon_x384.png"}
+                fill
+                alt={""}
+              />
+            </Box>
+          </Box>
+
+          {/* <IconBoilerplate /> */}
+
           <Typography
             textAlign={"center"}
             sx={{ fontSize: "28px", fontWeight: "bold", fontFamily: "", my: 3 }}
