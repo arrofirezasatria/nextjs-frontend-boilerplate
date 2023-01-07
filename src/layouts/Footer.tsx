@@ -6,7 +6,7 @@ import { useRouter } from "next/router";
 
 export default function Footer() {
   const router = useRouter();
-  const path = router.basePath;
+  const path = router.asPath;
 
   return (
     <Box
@@ -39,10 +39,10 @@ export default function Footer() {
           <Typography variant="h6" sx={{ fontFamily: "", fontSize: "18px" }}>
             {/* Next-MUI-boilerplate */}
           </Typography>
-          <Link href={`/${path}`} locale="id" key="id">
+          <Link href={`${path}`} locale="id" key="id">
             In
           </Link>
-          <Link href={`/${path}`} locale="en" key="en">
+          <Link href={`${path}`} locale="en" key="en">
             En
           </Link>
         </Box>

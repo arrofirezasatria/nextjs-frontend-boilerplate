@@ -53,3 +53,15 @@ export default function BlogPost() {
     </AppsContainer>
   );
 }
+
+import { GetServerSideProps, GetStaticPaths } from "next";
+
+export const getStaticPaths: GetStaticPaths = async () => {
+  return {};
+};
+
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    props: {},
+  };
+};

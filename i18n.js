@@ -10,7 +10,7 @@ module.exports = {
   pages: {
     "*": ["common"],
     "/": ["home"],
-    about: ["about"],
-    blog: ["blog"],
+    "/about": ["about"],
+    "/blog": ["blog"],
   },
 };
