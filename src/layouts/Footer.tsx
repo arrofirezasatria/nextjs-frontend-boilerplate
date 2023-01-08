@@ -1,8 +1,13 @@
 import { Box, Stack, Typography } from "@mui/material";
 import Image from "next/image";
 import React from "react";
+import Link from "next/link";
+import { useRouter } from "next/router";
 
 export default function Footer() {
+  const router = useRouter();
+  const path = router.basePath;
+
   return (
     <Box
       component={"footer"}
@@ -34,6 +39,12 @@ export default function Footer() {
           <Typography variant="h6" sx={{ fontFamily: "", fontSize: "18px" }}>
             {/* Next-MUI-boilerplate */}
           </Typography>
+          <Link href={`/${path}`} locale="id" key="id">
+            In
+          </Link>
+          <Link href={`/${path}`} locale="en" key="en">
+            En
+          </Link>
         </Box>
         <Stack
           direction={"row"}
