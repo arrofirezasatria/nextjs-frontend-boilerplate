@@ -19,10 +19,11 @@
 - E2E test using Cypress
 - Sitemap with next-sitemap
 - Pre config VsCode configuration
-- Github Action
+- CI/CD with Github Action
 - Dark Theme with MUI
 - Pre-commit with Husky
 - Commit linter with Commitlint
+- Code formatter with Prettier
 
 <!--
 
@@ -33,11 +34,13 @@ sadjkfh sfsdjfasd fasdjfkhasd fjkhasdf hasfhasd fasd fasdf
 -->
 
 
-## Deploy or Run In :
+## Deploy or Develop
+
+Deploy on Vercel in one click:
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Farrofirezasatria%2Fnextjs-mui-boilerplate)
 
-
+Develop on Gitpod in one Click:
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/arrofirezasatria/nextjs-mui-boilerplate)
 
@@ -65,22 +68,27 @@ npm run dev
 
 ```shell
 .
-├── .github                         # GitHub folder
+├── .github/workflow                # GitHub folder for CI/CD
 ├── .husky                          # Husky configuration
 ├── .vscode                         # VSCode configuration
-├── lib                             # Public assets folder
-│   ├── utils                       # Components
-│   ├── types                       # Components
+├── cypress                         # Cypress configuration
+├── lib                             # Support core code
+│   ├── utils                       # Utility Compoennet
+│   └── types                       # Types for typescript
 ├── public                          # Public assets folder
-│   ├── locales                     # Components
-│   ├── static                      # Components
+│   ├── locales                     # Languange JSON
+│   └── static                      # Static Files to be cached
 ├── src
 │   ├── components                  # Components
 │   ├── layouts                     # Layouts components
-│   ├── modules                     # Default template
-│       ├── components              # Default template
-│       ├── hooks                   # Default template
-│   ├── pages                       # Next JS Pages
+│   ├── modules                     
+│   |   ├── components              # Important Component
+│   |   |── hooks                   # Custom hooks
+|   |   └── brandingTheme.ts        # MUI theme Configuration
+│   └── pages                       # Next JS Pages
+├── tailwind.config.js              # Tailwind CSS configuration
+├── pretterrc.json                  # Prettier configuration
+├── i18n.js                         # Next-Translate I18N configuration
 ├── tailwind.config.js              # Tailwind CSS configuration
 └── tsconfig.json                   # TypeScript configuration
 ```
