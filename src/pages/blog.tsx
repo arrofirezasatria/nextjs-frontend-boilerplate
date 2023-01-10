@@ -14,7 +14,7 @@ export default function blog() {
 
   return (
     <AppsContainer>
-      <main>
+      <Box sx={{ maxHeight: "640px" }}>
         <>
           <TitleHeader title={"Blog"} desc={desc} />
           <Divider sx={{ mt: 2 }} />
@@ -50,7 +50,7 @@ export default function blog() {
             })}
           </Stack>
         </>
-      </main>
+      </Box>
     </AppsContainer>
   );
 }

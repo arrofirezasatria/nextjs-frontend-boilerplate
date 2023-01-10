@@ -6,6 +6,7 @@ import AppsContainer from "@layouts/AppsContainer";
 import useTranslation from "next-translate/useTranslation";
 import Image from "next/image";
 import IconBoilerplate from "@components/icon/IconBoilerplate";
+import { textAlign } from "@mui/system";
 
 export default function Home() {
   const { darkMode, toggleDarkMode } = useThemeContext();
@@ -14,9 +15,9 @@ export default function Home() {
 
   return (
     <AppsContainer>
-      <Box component="main" sx={{ height: "700px" }}>
+      <Box component="main" sx={{ minHeight: "640px" }}>
         <header>{/* <h1>Title</h1> */}</header>
-        <section>{title}</section>
+        {/* <section>{title}</section> */}
         <section>
           {/* <Box
             width={"100%"}
@@ -36,7 +37,7 @@ export default function Home() {
           </Box> */}
 
           <Box
-            sx={{ display: "flex", justifyContent: "center", height: "240px" }}
+            sx={{ display: "flex", justifyContent: "center", height: "120px" }}
           >
             <Box
               sx={{
@@ -45,8 +46,8 @@ export default function Home() {
                 position: "relative",
                 borderRadius: "8px",
                 overflow: "hidden",
-                width: "80px",
-                height: "80px",
+                width: "72px",
+                height: "72px",
               }}
             >
               <Image
@@ -61,17 +62,18 @@ export default function Home() {
 
           <Typography
             textAlign={"center"}
-            sx={{ fontSize: "28px", fontWeight: "bold", fontFamily: "", my: 3 }}
+            sx={{ fontSize: "26px", fontWeight: "bold", fontFamily: "", my: 3 }}
           >
-            NEXTJS - MUI - BOILERPLATE
+            NEXTJS MUI BOILERPLATE
           </Typography>
           <Typography
             textAlign={"center"}
-            sx={{ fontSize: "28px", fontWeight: "bold", fontFamily: "", my: 3 }}
+            sx={{ fontSize: "18px", fontWeight: "bold", fontFamily: "", my: 3 }}
           >
-            TECH
+            Complete structured production ready NextJs Boilerplate with styling
+            powered by MUI
           </Typography>
-          <Stack
+          {/* <Stack
             direction={"row"}
             sx={{ width: "100%", mt: 2 }}
             justifyContent="space-between"
@@ -79,7 +81,26 @@ export default function Home() {
             <Box>a</Box>
             <Box>b</Box>
             <Box>c</Box>
-          </Stack>
+          </Stack> */}
+          <Typography
+            gutterBottom
+            sx={{ textAlign: "center", paddingBottom: "20px" }}
+          >
+            Nostrud consequat reprehenderit nulla cupidatat duis aliquip in
+            adipisicing. Mollit id ea commodo ea sint aliquip amet nostrud minim
+            non esse dolore eiusmod. Ad nisi eu esse duis minim velit dolore ex.
+            Do consectetur eiusmod duis laborum minim sit cupidatat eu irure
+            aliquip reprehenderit ea ad pariatur. Tempor ullamco qui ea labore
+            magna eu. Lorem dolore elit in laboris sunt.
+          </Typography>
+          <Typography sx={{ textAlign: "center" }}>
+            Nostrud consequat reprehenderit nulla cupidatat duis aliquip in
+            adipisicing. Mollit id ea commodo ea sint aliquip amet nostrud minim
+            non esse dolore eiusmod. Ad nisi eu esse duis minim velit dolore ex.
+            Do consectetur eiusmod duis laborum minim sit cupidatat eu irure
+            aliquip reprehenderit ea ad pariatur. Tempor ullamco qui ea labore
+            magna eu. Lorem dolore elit in laboris sunt.
+          </Typography>
         </section>
       </Box>
     </AppsContainer>

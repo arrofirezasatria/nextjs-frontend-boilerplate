@@ -54,14 +54,14 @@ export default function BlogPost() {
   );
 }
 
-import { GetServerSideProps, GetStaticPaths } from "next";
+// import { GetServerSideProps, GetStaticPaths } from "next";
 
-export const getStaticPaths: GetStaticPaths = async () => {
-  return {};
-};
+// // export const getStaticPaths: GetStaticPaths = async () => {
+// //   return {};
+// // };
 
-export const getServerSideProps: GetServerSideProps = async () => {
-  return {
-    props: {},
-  };
-};
+// // export const getServerSideProps: GetServerSideProps = async () => {
+// //   return {
+// //     props: {},
+// //   };
+// // };

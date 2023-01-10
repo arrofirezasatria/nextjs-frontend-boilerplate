@@ -14,9 +14,6 @@ export default function about() {
   return (
     <AppsContainer>
       <TitleHeader title={aboutT} desc={descT} />
-      <Typography sx={{ fontFamily: "", mb: 4, color: "gray" }}>
-        adadadasds
-      </Typography>
     </AppsContainer>
   );
 }

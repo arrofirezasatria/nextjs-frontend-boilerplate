@@ -19,7 +19,7 @@ export default function Footer() {
         sx={{ px: "22px", py: "22px" }}
       >
         <Box>
-          <Box
+          {/* <Box
             sx={{
               position: "relative",
               borderRadius: "8px",
@@ -35,10 +35,10 @@ export default function Footer() {
               alt="NextJS-MUI-boilerplate logo"
               fill
             />
-          </Box>
-          <Typography variant="h6" sx={{ fontFamily: "", fontSize: "18px" }}>
-            {/* Next-MUI-boilerplate */}
-          </Typography>
+          </Box> */}
+          {/* <Typography variant="h6" sx={{ fontFamily: "", fontSize: "18px" }}> */}
+          {/* Next-MUI-boilerplate */}
+          {/* </Typography> */}
           <Link href={`${path}`} locale="id" key="id">
             In
           </Link>
