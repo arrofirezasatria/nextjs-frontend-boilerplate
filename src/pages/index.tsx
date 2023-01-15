@@ -17,25 +17,7 @@ export default function Home() {
     <AppsContainer>
       <Box component="main" sx={{ minHeight: "640px" }}>
         <header>{/* <h1>Title</h1> */}</header>
-        {/* <section>{title}</section> */}
         <section>
-          {/* <Box
-            width={"100%"}
-            height="300px"
-            sx={{
-              position: "relative",
-              borderRadius: "8px",
-              overflow: "hidden",
-            }}
-          >
-            <Image
-              src="/static/images/dummyImage_1600x900.png"
-              fill
-              alt={""}
-              style={{ objectFit: "cover" }}
-            />
-          </Box> */}
-
           <Box
             sx={{ display: "flex", justifyContent: "center", height: "120px" }}
           >
@@ -57,9 +39,6 @@ export default function Home() {
               />
             </Box>
           </Box>
-
-          {/* <IconBoilerplate /> */}
-
           <Typography
             textAlign={"center"}
             sx={{ fontSize: "26px", fontWeight: "bold", fontFamily: "", my: 3 }}
@@ -73,15 +52,6 @@ export default function Home() {
             Complete structured production ready NextJs Boilerplate with styling
             powered by MUI
           </Typography>
-          {/* <Stack
-            direction={"row"}
-            sx={{ width: "100%", mt: 2 }}
-            justifyContent="space-between"
-          >
-            <Box>a</Box>
-            <Box>b</Box>
-            <Box>c</Box>
-          </Stack> */}
           <Typography
             gutterBottom
             sx={{ textAlign: "center", paddingBottom: "20px" }}

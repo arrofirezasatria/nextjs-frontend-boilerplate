@@ -1,10 +1,10 @@
-import { Box, Stack, Typography } from "@mui/material";
-import Image from "next/image";
-import React from "react";
-import Link from "next/link";
+import { Box, ButtonBase, Stack, Typography } from "@mui/material";
+import React, { useState } from "react";
 import { useRouter } from "next/router";
+import LanguageIcon from "@mui/icons-material/Language";
 
 export default function Footer() {
+  const [language, setLanguage] = useState(true);
   const router = useRouter();
   const path = router.asPath;
 
@@ -16,57 +16,56 @@ export default function Footer() {
       <Stack
         direction="row"
         justifyContent={"space-between"}
-        sx={{ px: "22px", py: "22px" }}
+        alignItems={"center"}
+        sx={{ p: 2 }}
       >
         <Box>
-          {/* <Box
+          <ButtonBase
+            disableTouchRipple
+            onClick={() => {
+              setLanguage((prev) => !prev);
+              router.push(`${path}`, `${path}`, {
+                locale: language ? "id" : "en",
+              });
+            }}
             sx={{
-              position: "relative",
+              fontSize: "14px !important",
+              py: 0.5,
+              px: 0.5,
               borderRadius: "8px",
-              flexWrap: "hidden",
-              overflow: "hidden",
-              width: "32px",
-              height: "32px",
-              mt: "2px",
             }}
           >
-            <Image
-              src="/static/icons/maskable_icon_x48.png"
-              alt="NextJS-MUI-boilerplate logo"
-              fill
-            />
-          </Box> */}
-          {/* <Typography variant="h6" sx={{ fontFamily: "", fontSize: "18px" }}> */}
-          {/* Next-MUI-boilerplate */}
-          {/* </Typography> */}
-          <Link href={`${path}`} locale="id" key="id">
-            In
-          </Link>
-          <Link href={`${path}`} locale="en" key="en">
-            En
-          </Link>
+            <Stack direction={"row"} spacing={0.5}>
+              <LanguageIcon fontSize="small" sx={{ color: "gray" }} />
+              <Typography
+                fontSize={"14px"}
+                sx={{
+                  fontWeight: "bold",
+                  color: "gray",
+                  lineHeight: 1,
+                  textDecoration: "underline",
+                  textUnderlineOffset: "4.5px",
+                }}
+              >
+                {language ? "Indonesia" : "English"}
+              </Typography>
+            </Stack>
+          </ButtonBase>
         </Box>
-        <Stack
-          direction={"row"}
-          spacing={5}
+        <Box
           sx={{
-            paddingRight: "10px",
-            color: "Gray",
+            display: "flex",
+            alignItems: "center",
+            backgroundColor: "white",
+            px: 2,
+            py: 1,
+            borderRadius: "8px",
           }}
         >
-          <Stack spacing={1} sx={{ fontSize: "14px" }}>
-            <Typography sx={{ fontSize: "14px" }}>Home</Typography>
-          </Stack>
-          <Stack spacing={1}>
-            <Typography sx={{ fontSize: "14px" }}>Home</Typography>
-            <Typography sx={{ fontSize: "14px" }}>About</Typography>
-          </Stack>
-          <Stack spacing={1}>
-            <Typography sx={{ fontSize: "14px" }}>Home</Typography>
-            <Typography sx={{ fontSize: "14px" }}>About</Typography>
-            <Typography sx={{ fontSize: "14px" }}>Blog</Typography>
-          </Stack>
-        </Stack>
+          <Typography sx={{ fontSize: "14px" }}>
+            Deployed on ▲ Vercel
+          </Typography>
+        </Box>
       </Stack>
     </Box>
   );

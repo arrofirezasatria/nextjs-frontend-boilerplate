@@ -15,11 +15,7 @@ export default function AppsContainer(AppsContainerProps: props) {
   const { children, basicSeo, ...rest } = AppsContainerProps;
 
   return (
-    <Container
-      // disableGutters={theme.breakpoints.up("lg") === true}
-      maxWidth={"sm"}
-      {...rest}
-    >
+    <Container maxWidth={"sm"} {...rest}>
       <NextSeo {...basicSeo} />
       <AppsBar />
       {children}

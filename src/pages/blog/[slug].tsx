@@ -8,7 +8,6 @@ export default function BlogPost() {
   return (
     <AppsContainer>
       <Box component={"main"}>
-        {/* JSON-LD can more than one  */}
         <ArticleJsonLd
           url={""}
           title={""}
@@ -53,15 +52,3 @@ export default function BlogPost() {
     </AppsContainer>
   );
 }
-
-// import { GetServerSideProps, GetStaticPaths } from "next";
-
-// // export const getStaticPaths: GetStaticPaths = async () => {
-// //   return {};
-// // };
-
-// // export const getServerSideProps: GetServerSideProps = async () => {
-// //   return {
-// //     props: {},
-// //   };
-// // };
