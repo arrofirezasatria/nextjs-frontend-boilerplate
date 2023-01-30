@@ -85,6 +85,11 @@ npm run dev
 └── tsconfig.json                   # TypeScript configuration
 ```
 
+## Roadmap :
+
+1. Cookies Pop Up
+2. Toggle Dark Theme
+
 
 
 
