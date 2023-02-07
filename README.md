@@ -68,20 +68,19 @@ npm run dev
 ├── .github                         # GitHub folder
 ├── .husky                          # Husky configuration
 ├── .vscode                         # VSCode configuration
-├── lib                             # Public assets folder
-│   ├── utils                       # Components
-│   ├── types                       # Components
-├── public                          # Public assets folder
-│   ├── locales                     # Components
-│   ├── static                      # Components
+├── lib                             
+│   ├── utils                       # Utility function
+│   ├── types                       # Types folder
+├── public                         
+│   ├── locales                     # I18N language translation Json
+│   ├── static                      # public static folder
 ├── src
 │   ├── components                  # Components
 │   ├── layouts                     # Layouts components
-│   ├── modules                     # Default template
-│       ├── components              # Default template
-│       ├── hooks                   # Default template
+│   ├── modules                     
+│       ├── components              # Modules Components like Theme Provider
+│       ├── hooks                   # Custom Hooks
 │   ├── pages                       # Next JS Pages
-├── tailwind.config.js              # Tailwind CSS configuration
 └── tsconfig.json                   # TypeScript configuration
 ```
 
