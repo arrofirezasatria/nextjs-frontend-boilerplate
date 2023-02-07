@@ -33,11 +33,11 @@ sadjkfh sfsdjfasd fasdjfkhasd fjkhasdf hasfhasd fasd fasdf
 -->
 
 
-## Deploy or Run In :
+## Deploy  
 
 [![Deploy with Vercel](https://vercel.com/button)](https://vercel.com/new/clone?repository-url=https%3A%2F%2Fgithub.com%2Farrofirezasatria%2Fnextjs-mui-boilerplate)
 
-
+## Run in
 
 [![Open in Gitpod](https://gitpod.io/button/open-in-gitpod.svg)](https://gitpod.io/#https://github.com/arrofirezasatria/nextjs-mui-boilerplate)
 
