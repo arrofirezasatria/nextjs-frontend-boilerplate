@@ -1,3 +1,19 @@
+# [1.2.0](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/compare/v1.1.0...v1.2.0) (2023-03-02)
+
+
+### Bug Fixes
+
+* sty;e ([605fe63](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/commit/605fe63fa5f0f9177bdd5eba4606478f4d4cb341))
+* styling ([a7f98f7](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/commit/a7f98f7f055ba16e8a054b6c1356e74569fee06a))
+
+
+### Features
+
+* ad icon jsx ([be0e650](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/commit/be0e650fcb5736841ee380ddadaa6e5e7e126815))
+* new translation page ([71514cd](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/commit/71514cda97c2bb9f28536ecd084ff0ed9f7d4892))
+* new upadte ([4441f4a](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/commit/4441f4a9161ed3a1d5e994e4d261048e0d3d8fa0))
+* update ([3c077c5](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/commit/3c077c595b6d06493bac491e28af468eb6bb2f18))
+
 # [1.1.0](https://github.com/arrofirezasatria/nextjs-mui-boilerplate/compare/v1.0.0...v1.1.0) (2023-01-01)
 
 

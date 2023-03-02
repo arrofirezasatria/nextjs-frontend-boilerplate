@@ -1,6 +1,6 @@
 {
   "name": "nextjs-mui-boilerplate",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "author": "Arrofi Reza S. (https://github.com/arrofirezasatria)",
   "scripts": {
     "dev": "next dev",
