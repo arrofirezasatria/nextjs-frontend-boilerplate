@@ -1,5 +1,5 @@
 
-<h1 align="center">NextJs MUI Boilerplate</h1>
+<h1 align="center">NextJs FE Boilerplate</h1>
 <p align="center">Complete structured production ready NextJs Boilerplate with styling powered by MUI</p>
 
 ### Key Features
