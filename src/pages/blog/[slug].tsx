@@ -8,7 +8,6 @@ export default function BlogPost() {
   return (
     <AppsContainer>
       <Box component={"main"}>
-        {/* JSON-LD can more than one  */}
         <ArticleJsonLd
           url={""}
           title={""}
