@@ -1,5 +1,5 @@
-import { Rubik } from "@next/font/google";
-import { Poppins } from "@next/font/google";
+import { Rubik } from "next/font/google";
+import { Poppins } from "next/font/google";
 
 export const cultured = {
   // 50: "#F0F7FF",
