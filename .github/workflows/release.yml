@@ -27,6 +27,7 @@ jobs:
           cache: "npm"
       - run: npm ci
       - run: git fetch --tags
+      - run: git push --follow-tags
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
