@@ -1,10 +1,8 @@
 import React from "react";
 import AppsContainer from "@layouts/AppsContainer";
 import TitleHeader from "@components/TitleHeader";
-import { Typography } from "@mui/material";
 
 import UseTranslation from "next-translate/useTranslation";
-import { title } from "process";
 
 export default function about() {
   const { t } = UseTranslation("about");
