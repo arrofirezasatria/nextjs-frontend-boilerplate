@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/compare/v1.3.1...v1.3.2) (2023-04-16)
+
+
+### Bug Fixes
+
+* ci ([d8c98ba](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/commit/d8c98baa9dac46071d2d144c778869b7c99b87c1))
+
 ## [1.3.1](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/compare/v1.3.0...v1.3.1) (2023-04-16)
 
 
