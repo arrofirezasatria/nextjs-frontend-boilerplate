@@ -1,3 +1,10 @@
+# [1.3.0](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/compare/v1.2.0...v1.3.0) (2023-04-16)
+
+
+### Features
+
+* new release ([4e18cc2](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/commit/4e18cc28ade44f3c878651004b5f3c187eb688f7))
+
 # [1.2.0](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/compare/v1.1.0...v1.2.0) (2023-03-02)
 
 
