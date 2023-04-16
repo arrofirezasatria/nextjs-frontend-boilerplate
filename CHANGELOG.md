@@ -1,3 +1,10 @@
+## [1.3.5](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/compare/v1.3.4...v1.3.5) (2023-04-16)
+
+
+### Bug Fixes
+
+* unused import in about us ([3a59622](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/commit/3a59622e4032e617289d33429ec90a4aa71f501a))
+
 ## [1.3.4](https://github.com/arrofirezasatria/nextjs-frontend-boilerplate/compare/v1.3.3...v1.3.4) (2023-04-16)
 
 
