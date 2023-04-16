@@ -26,7 +26,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
           cache: "npm"
       - run: npm ci
-
+      - run: git fetch --tags
       - name: Release
         env:
           GH_TOKEN: ${{ secrets.GH_TOKEN }}
