@@ -1,4 +1,4 @@
-const workaround = require("next-translate/lib/cjs/plugin/utils.js");
+const workaround = require("next-translate-plugin/lib/cjs/utils.js");
 
 // As a workaround you can change the string of the defaultLoader, this is working fine
 workaround.defaultLoader =

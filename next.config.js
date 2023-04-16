@@ -10,7 +10,7 @@ const withBundleAnalyzer = require("@next/bundle-analyzer")({
   enabled: process.env.ANALYZE === "true",
 });
 
-const nextTranslate = require("next-translate");
+const nextTranslate = require("next-translate-plugin");
 
 const nextConfig = {
   reactStrictMode: true,
